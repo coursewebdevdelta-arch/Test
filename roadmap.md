@@ -1,0 +1,2 @@
+- [ ] Recreate reference portfolio as a React website with editable sample content, generated portrait, navigation, contact links, and disclaimer.
+- [ ] Verify preview and clear the implementation checklist.
