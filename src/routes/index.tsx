@@ -56,6 +56,7 @@ export const Route = createFileRoute("/")({
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "geo.region", content: "IN-UP" },
       { name: "geo.placename", content: "Lucknow, Delhi NCR" },
+      { property: "og:url", content: "https://test-snowy-one-63.vercel.app/" },
       { property: "og:title", content: "Advocate Shashank Shekhar Tripathi | Legal Counsel & Advocate" },
       {
         property: "og:description",
@@ -64,6 +65,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "profile" },
       { property: "og:locale", content: "en_IN" },
+      { property: "og:image", content: "https://test-snowy-one-63.vercel.app/assets/shashank-shekhar-tripathi-portrait.jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Advocate Shashank Shekhar Tripathi | Legal Counsel" },
       {
@@ -71,8 +73,10 @@ export const Route = createFileRoute("/")({
         content:
           "Advocate practicing in Delhi NCR and Lucknow across High Court, Supreme Court, and tribunals.",
       },
+      { name: "twitter:image", content: "https://test-snowy-one-63.vercel.app/assets/shashank-shekhar-tripathi-portrait.jpeg" },
     ],
     links: [
+      { rel: "canonical", href: "https://test-snowy-one-63.vercel.app/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -268,14 +272,15 @@ const legalPracticeSchema = {
   "@graph": [
     {
       "@type": ["LegalService", "Attorney"],
-      "@id": "#attorney",
+      "@id": "https://test-snowy-one-63.vercel.app/#attorney",
+      url: "https://test-snowy-one-63.vercel.app/",
       name: "Advocate Shashank Shekhar Tripathi",
       alternateName: ["Shashank Shekhar Tripathi", "Advocate S.S. Tripathi"],
       description:
         "Advocate enrolled with the Bar Council of Uttar Pradesh, maintaining an active practice across courts, tribunals, and regulatory forums in Delhi NCR and Lucknow. Specializing in Civil & commercial litigation, Arbitration, cyber law, and corporate regulatory compliance.",
       telephone: "+917905182151",
       email: "Shashank_tripathi08@outlook.com",
-      image: advocatePortrait,
+      image: "https://test-snowy-one-63.vercel.app/assets/shashank-shekhar-tripathi-portrait.jpeg",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Lucknow",
@@ -332,7 +337,7 @@ const legalPracticeSchema = {
     },
     {
       "@type": "FAQPage",
-      "@id": "#faq",
+      "@id": "https://test-snowy-one-63.vercel.app/#faq",
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
