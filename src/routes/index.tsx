@@ -20,7 +20,7 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import advocatePortrait from "@/assets/shashank-shekhar-tripathi-portrait.jpeg.asset.json";
+import advocatePortrait from "@/assets/shashank-shekhar-tripathi-portrait.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
