@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+
+- Build the primary experience as a React page in the TanStack Start file-based route tree; keep portfolio copy and repeated content data colocated with that page so it is straightforward to customize.
