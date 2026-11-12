@@ -20,21 +20,21 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import advocatePortrait from "@/assets/sample-advocate.jpg";
+import advocatePortrait from "@/assets/shashank-shekhar-tripathi-portrait.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Arjun Mehra | Advocate & Legal Counsel" },
+      { title: "Shashank Shekhar Tripathi | Advocate & Legal Counsel" },
       {
         name: "description",
         content:
-          "Meet Advocate Arjun Mehra, a sample independent legal practice serving Lucknow and the surrounding region.",
+          "Meet Advocate Shashank Shekhar Tripathi, an independent legal practice serving Lucknow and the surrounding region.",
       },
-      { property: "og:title", content: "Arjun Mehra | Advocate & Legal Counsel" },
+      { property: "og:title", content: "Shashank Shekhar Tripathi | Advocate & Legal Counsel" },
       {
         property: "og:description",
-        content: "A considered legal practice in Lucknow. Sample portfolio website.",
+        content: "A considered legal practice in Lucknow.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -176,9 +176,9 @@ function PortfolioPage() {
 
       <header className="site-header">
         <div className="site-shell header-inner">
-          <a className="brand" href="#main" onClick={closeMenu} aria-label="Arjun Mehra, home">
+          <a className="brand" href="#main" onClick={closeMenu} aria-label="Shashank Shekhar Tripathi, home">
             <span className="brand-mark"><Scale aria-hidden="true" /></span>
-            <span className="brand-copy"><strong>Arjun Mehra</strong><small>ADVOCATE &amp; LEGAL COUNSEL</small></span>
+            <span className="brand-copy"><strong>Shashank Shekhar Tripathi</strong><small>ADVOCATE &amp; LEGAL COUNSEL</small></span>
           </a>
           <Button
             type="button"
@@ -227,13 +227,13 @@ function PortfolioPage() {
             <div className="portrait-frame" />
             <img
               className="hero-portrait"
-              src={advocatePortrait}
-              alt="Sample portrait of an advocate in a law chamber"
+              src={advocatePortrait.url}
+              alt="Portrait of Advocate Shashank Shekhar Tripathi"
               width={1024}
               height={1280}
               fetchPriority="high"
             />
-            <div className="portrait-caption"><span className="caption-mark">AM</span><span><strong>Advocate Arjun Mehra</strong><small>Lucknow, Uttar Pradesh</small></span></div>
+            <div className="portrait-caption"><span className="caption-mark">ST</span><span><strong>Advocate Shashank Shekhar Tripathi</strong><small>Lucknow, Uttar Pradesh</small></span></div>
             <div className="portrait-seal"><Scale aria-hidden="true" /><span>COUNSEL<br />&amp; ADVOCATE</span></div>
           </div>
         </div>
@@ -272,7 +272,7 @@ function PortfolioPage() {
       <section className="about-section section-pad" id="about">
         <div className="site-shell about-layout">
           <div className="about-photo-wrap">
-            <img src={advocatePortrait} alt="Sample advocate portrait in a legal chamber" width={1024} height={1280} loading="lazy" />
+            <img src={advocatePortrait.url} alt="Portrait of Advocate Shashank Shekhar Tripathi" width={576} height={1024} loading="lazy" />
             <div className="about-photo-note"><Scale aria-hidden="true" /><span>Careful preparation<br />at every stage</span></div>
           </div>
           <div className="about-copy">
@@ -360,12 +360,12 @@ function PortfolioPage() {
 
       <footer className="site-footer">
         <div className="site-shell footer-main">
-          <a className="brand footer-brand" href="#main"><span className="brand-mark"><Scale aria-hidden="true" /></span><span className="brand-copy"><strong>Arjun Mehra</strong><small>ADVOCATE &amp; LEGAL COUNSEL</small></span></a>
+          <a className="brand footer-brand" href="#main"><span className="brand-mark"><Scale aria-hidden="true" /></span><span className="brand-copy"><strong>Shashank Shekhar Tripathi</strong><small>ADVOCATE &amp; LEGAL COUNSEL</small></span></a>
           <p>Independent legal practice<br />Lucknow, Uttar Pradesh</p>
           <nav aria-label="Footer navigation"><a href="#about">About</a><a href="#practice">Practice</a><a href="#insights">Insights</a><a href="#contact">Contact</a></nav>
           <a className="back-top" href="#main">Back to top <ArrowUpRight aria-hidden="true" /></a>
         </div>
-        <div className="site-shell footer-bottom"><span>© {new Date().getFullYear()} Arjun Mehra. Sample portfolio content.</span><button type="button" onClick={() => setDisclaimerOpen(true)}>Legal disclaimer</button><span>For general information only · Not legal advice</span></div>
+        <div className="site-shell footer-bottom"><span>© {new Date().getFullYear()} Shashank Shekhar Tripathi.</span><button type="button" onClick={() => setDisclaimerOpen(true)}>Legal disclaimer</button><span>For general information only · Not legal advice</span></div>
       </footer>
 
       {disclaimerOpen && (
@@ -374,7 +374,7 @@ function PortfolioPage() {
             <div className="eyebrow"><span /> PLEASE READ</div>
             <h2 id="disclaimer-title">A note before you continue</h2>
             <div id="disclaimer-copy" className="disclaimer-copy">
-              <p>This is a sample portfolio website. The name, portrait, qualifications, practice information, and contact details shown here are placeholders and should be replaced with accurate information.</p>
+              <p>Some qualifications, practice information, and contact details shown here are placeholders and should be confirmed or replaced with accurate information.</p>
               <p>This website is for general information only and does not provide legal advice. Contacting an advocate through this website does not by itself create an advocate–client relationship.</p>
             </div>
             <div className="disclaimer-actions">
