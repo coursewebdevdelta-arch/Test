@@ -81,12 +81,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Advocate Shashank Shekhar Tripathi | Legal Counsel" },
-      { name: "description", content: "Advocate Shashank Shekhar Tripathi – Enrolled with Bar Council of Uttar Pradesh, practicing in Delhi NCR & Lucknow." },
+      { title: "Advocate Shashank Shekhar Tripathi | High Court & Supreme Court Legal Counsel" },
+      {
+        name: "description",
+        content:
+          "Advocate Shashank Shekhar Tripathi – Enrolled with Bar Council of Uttar Pradesh. Legal practice across High Court (Lucknow Bench), Supreme Court, and Delhi NCR specializing in Civil & Commercial Litigation, Arbitration, Cyber Law, and Corporate Compliance.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Advocate Shashank Shekhar Tripathi, Lawyer Shashank Shekhar Tripathi, Advocate in Lucknow, High Court Lawyer Lucknow, Supreme Court Advocate Delhi, Cyber Lawyer Lucknow, Arbitration Counsel Delhi NCR, Bar Council of Uttar Pradesh, Civil Commercial Litigation, CAT Principal Bench New Delhi",
+      },
       { name: "author", content: "Advocate Shashank Shekhar Tripathi" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "geo.region", content: "IN-UP" },
+      { name: "geo.placename", content: "Lucknow, Delhi NCR" },
       { property: "og:title", content: "Advocate Shashank Shekhar Tripathi | Legal Counsel" },
-      { property: "og:description", content: "Active practice across courts, tribunals, and regulatory forums in Delhi NCR and Lucknow." },
+      {
+        property: "og:description",
+        content:
+          "Enrolled with Bar Council of Uttar Pradesh. Civil & commercial litigation, Arbitration, cyber law, and corporate regulatory compliance in Delhi NCR and Lucknow.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
     ],

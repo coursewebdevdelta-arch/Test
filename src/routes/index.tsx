@@ -29,24 +29,47 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import advocatePortrait from "@/assets/shashank-shekhar-tripathi-portrait.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Advocate Shashank Shekhar Tripathi | Legal Counsel" },
+      { title: "Advocate Shashank Shekhar Tripathi | High Court & Supreme Court Legal Counsel" },
       {
         name: "description",
         content:
-          "Advocate Shashank Shekhar Tripathi – Enrolled with the Bar Council of Uttar Pradesh. Civil & commercial litigation, Arbitration, cyber law, and corporate regulatory compliance in Delhi NCR and Lucknow.",
+          "Advocate Shashank Shekhar Tripathi – Enrolled with Bar Council of Uttar Pradesh. Active practice across Allahabad High Court (Lucknow Bench), Supreme Court of India & Delhi NCR in Civil & Commercial Litigation, Arbitration, Cyber Law, Corporate Compliance & Service Matters.",
       },
-      { property: "og:title", content: "Advocate Shashank Shekhar Tripathi | Legal Counsel" },
+      {
+        name: "keywords",
+        content:
+          "Advocate Shashank Shekhar Tripathi, Lawyer Shashank Shekhar Tripathi, Advocate in Lucknow, High Court Lawyer Lucknow, Supreme Court Advocate Delhi, Cyber Lawyer Lucknow, Arbitration Counsel Delhi NCR, Bar Council of Uttar Pradesh, Civil Commercial Litigation, CAT Principal Bench New Delhi, Debt Recovery Tribunal DRT, Corporate Compliance Lawyer",
+      },
+      { name: "author", content: "Advocate Shashank Shekhar Tripathi" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "geo.region", content: "IN-UP" },
+      { name: "geo.placename", content: "Lucknow, Delhi NCR" },
+      { property: "og:title", content: "Advocate Shashank Shekhar Tripathi | Legal Counsel & Advocate" },
       {
         property: "og:description",
-        content: "Active practice across courts, tribunals, and regulatory forums in Delhi NCR and Lucknow.",
+        content:
+          "Enrolled with Bar Council of Uttar Pradesh. Practice across Allahabad High Court (Lucknow Bench), Supreme Court & Delhi NCR in Civil & Commercial Litigation, Arbitration, Cyber Law & Corporate Compliance.",
       },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "profile" },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Advocate Shashank Shekhar Tripathi | Legal Counsel" },
+      {
+        name: "twitter:description",
+        content:
+          "Advocate practicing in Delhi NCR and Lucknow across High Court, Supreme Court, and tribunals.",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -211,13 +234,123 @@ const contactDetails = {
   whatsapp: "https://wa.me/917905182151?text=Hello%20Advocate%20Shashank%20Shekhar%20Tripathi%2C%20I%20would%20like%20to%20inquire%20about%20a%20legal%20consultation.",
 };
 
+const faqs = [
+  {
+    question: "Where does Advocate Shashank Shekhar Tripathi practice?",
+    answer:
+      "Advocate Shashank Shekhar Tripathi maintains an active legal practice across courts, tribunals, and regulatory forums in Delhi NCR and Lucknow, including the High Court of Judicature at Allahabad (Lucknow Bench), Supreme Court of India, District & Sessions Courts, and Central Administrative Tribunal (CAT).",
+  },
+  {
+    question: "What legal matters and practice areas does the chamber handle?",
+    answer:
+      "The chamber specializes across 15 practice areas, notably Civil & Commercial Litigation, Domestic and International Arbitration, Cyber Law & Digital Fraud Claims, Corporate Regulatory Compliance, Supreme Court Special Leave Petitions (SLP), Real Estate transactions, and Service Law.",
+  },
+  {
+    question: "How can I book a legal consultation?",
+    answer:
+      "Consultations are arranged by appointment. You can reach out directly via phone or WhatsApp at +91 79051 82151 or by email at Shashank_tripathi08@outlook.com to share brief details of your matter and schedule an in-person or video conference.",
+  },
+  {
+    question: "What qualifications and bar enrollments does Advocate Shashank Shekhar Tripathi hold?",
+    answer:
+      "He is an Advocate enrolled with the Bar Council of Uttar Pradesh. His academic qualifications include BA LLB from New Law College (NLC) Pune, Master of Laws (LLM) from SRMU Lucknow, and a Diploma in Cyber Laws from the Asian School of Cyber Laws.",
+  },
+  {
+    question: "Are virtual or online consultations available for outstation clients?",
+    answer:
+      "Yes. Virtual consultations via video conference and phone are regularly conducted for corporate and individual clients located across India or overseas needing representation before Indian courts and arbitral tribunals.",
+  },
+];
+
+const legalPracticeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LegalService", "Attorney"],
+      "@id": "#attorney",
+      name: "Advocate Shashank Shekhar Tripathi",
+      alternateName: ["Shashank Shekhar Tripathi", "Advocate S.S. Tripathi"],
+      description:
+        "Advocate enrolled with the Bar Council of Uttar Pradesh, maintaining an active practice across courts, tribunals, and regulatory forums in Delhi NCR and Lucknow. Specializing in Civil & commercial litigation, Arbitration, cyber law, and corporate regulatory compliance.",
+      telephone: "+917905182151",
+      email: "Shashank_tripathi08@outlook.com",
+      image: advocatePortrait,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lucknow",
+        addressRegion: "Uttar Pradesh",
+        addressCountry: "IN",
+      },
+      areaServed: [
+        { "@type": "City", name: "Lucknow" },
+        { "@type": "AdministrativeArea", name: "Delhi NCR" },
+        { "@type": "State", name: "Uttar Pradesh" },
+        { "@type": "Country", name: "India" },
+      ],
+      knowsLanguage: ["English", "Hindi"],
+      alumniOf: [
+        {
+          "@type": "EducationalOrganization",
+          name: "New Law College (NLC), Pune",
+          description: "BA LLB",
+        },
+        {
+          "@type": "EducationalOrganization",
+          name: "Shri Ramswaroop Memorial University (SRMU), Lucknow",
+          description: "LLM",
+        },
+        {
+          "@type": "EducationalOrganization",
+          name: "Asian School of Cyber Laws (ASCL)",
+          description: "Diploma in Cyber Laws",
+        },
+      ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Professional License",
+          name: "Advocate License",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Bar Council of Uttar Pradesh",
+          },
+        },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Areas of Legal Practice",
+        itemListElement: practiceAreas.map((area) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: area.title,
+            description: area.description,
+          },
+        })),
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+  ],
+};
+
 function PortfolioPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [disclaimerOpen, setDisclaimerOpen] = useState(false);
 
   useEffect(() => {
     try {
-      setDisclaimerOpen(window.localStorage.getItem("arjun-portfolio-disclaimer") !== "accepted");
+      setDisclaimerOpen(window.localStorage.getItem("sst-portfolio-disclaimer") !== "accepted");
     } catch {
       setDisclaimerOpen(true);
     }
@@ -225,7 +358,7 @@ function PortfolioPage() {
 
   const acceptDisclaimer = () => {
     try {
-      window.localStorage.setItem("arjun-portfolio-disclaimer", "accepted");
+      window.localStorage.setItem("sst-portfolio-disclaimer", "accepted");
     } catch {
       // The notice still closes if browser storage is unavailable.
     }
@@ -236,6 +369,10 @@ function PortfolioPage() {
 
   return (
     <main id="main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalPracticeSchema) }}
+      />
       <div className="notice-bar">
         <div className="site-shell notice-inner">
           <span><MapPin aria-hidden="true" /> Bar Council of Uttar Pradesh | Delhi NCR &amp; Lucknow</span>
@@ -268,6 +405,7 @@ function PortfolioPage() {
             <a href="#main" onClick={closeMenu}>Home</a>
             <a href="#about" onClick={closeMenu}>About</a>
             <a href="#practice" onClick={closeMenu}>Practice areas <ChevronDown aria-hidden="true" /></a>
+            <a href="#faq" onClick={closeMenu}>FAQs</a>
             <a href="#insights" onClick={closeMenu}>Insights</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
             <Button asChild className="nav-cta">
@@ -418,6 +556,29 @@ function PortfolioPage() {
         </div>
       </section>
 
+      <section className="faq-section section-pad" id="faq">
+        <div className="site-shell">
+          <div className="section-heading">
+            <div><div className="eyebrow"><span /> FREQUENTLY ASKED QUESTIONS</div><h2>Common legal <em>queries</em></h2></div>
+            <p>Practical guidance on jurisdiction, consultations, and legal proceedings before courts and tribunals.</p>
+          </div>
+          <div className="faq-wrap">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem value={`faq-${index}`} key={faq.question} className="faq-item">
+                  <AccordionTrigger className="faq-trigger">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="faq-content">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       <section className="contact-section section-pad" id="contact">
         <div className="site-shell contact-layout">
           <div className="contact-copy">
@@ -442,7 +603,7 @@ function PortfolioPage() {
         <div className="site-shell footer-main">
           <a className="brand footer-brand" href="#main"><span className="brand-mark"><Scale aria-hidden="true" /></span><span className="brand-copy"><strong>Shashank Shekhar Tripathi</strong><small>ADVOCATE &amp; LEGAL COUNSEL</small></span></a>
           <p>Enrolled with Bar Council of Uttar Pradesh<br />Delhi NCR &amp; Lucknow</p>
-          <nav aria-label="Footer navigation"><a href="#about">About</a><a href="#practice">Practice</a><a href="#insights">Insights</a><a href="#contact">Contact</a></nav>
+          <nav aria-label="Footer navigation"><a href="#about">About</a><a href="#practice">Practice</a><a href="#faq">FAQs</a><a href="#insights">Insights</a><a href="#contact">Contact</a></nav>
           <a className="back-top" href="#main">Back to top <ArrowUpRight aria-hidden="true" /></a>
         </div>
         <div className="site-shell footer-bottom"><span>© {new Date().getFullYear()} Advocate Shashank Shekhar Tripathi.</span><button type="button" onClick={() => setDisclaimerOpen(true)}>Legal disclaimer</button><span>For general information only · Not legal advice</span></div>

@@ -303,6 +303,14 @@
 .article-meta span:last-child { color: var(--color-muted-foreground); }
 .article-item h3 { max-width: 300px; margin: 23px 0 9px; font: 600 20px/1.4 var(--font-serif); }
 .article-item > a { margin-top: 20px; }
+.faq-section { background: var(--color-background); }
+.faq-wrap { max-width: 860px; margin: 35px auto 0; }
+.faq-item { border-bottom: 1px solid var(--color-border); }
+.faq-trigger { display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 18px 0; font: 600 17px/1.4 var(--font-serif); color: var(--color-foreground); text-align: left; background: none; border: 0; cursor: pointer; transition: color .2s ease; }
+.faq-trigger:hover, .faq-trigger[data-state=open] { color: var(--color-gold-foreground); }
+.faq-trigger svg { width: 18px; height: 18px; color: var(--color-gold); transition: transform .2s ease; }
+.faq-trigger[data-state=open] svg { transform: rotate(180deg); }
+.faq-content { padding-bottom: 20px; color: var(--color-muted-foreground); font-size: 13px; line-height: 1.85; }
 .contact-section { background: var(--color-primary); color: var(--color-primary-foreground); }
 .contact-layout { display: grid; grid-template-columns: 1fr .8fr; gap: 100px; align-items: center; }
 .contact-copy .eyebrow { color: var(--color-gold); }
