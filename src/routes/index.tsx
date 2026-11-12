@@ -52,7 +52,7 @@ export const Route = createFileRoute("/")({
           "Advocate Shashank Shekhar Tripathi, Lawyer Shashank Shekhar Tripathi, Advocate in Lucknow, High Court Lawyer Lucknow, Supreme Court Advocate Delhi, Cyber Lawyer Lucknow, Arbitration Counsel Delhi NCR, Bar Council of Uttar Pradesh, Civil Commercial Litigation, CAT Principal Bench New Delhi, Debt Recovery Tribunal DRT, Corporate Compliance Lawyer",
       },
       { name: "author", content: "Advocate Shashank Shekhar Tripathi" },
-      { name: "google-site-verification", content: "google2ed81ec9cd2bb5f3" },
+      { name: "google-site-verification", content: "01PzcyCigHokBIbzPebmvLimVRCjWiF7WRqBCGoSN2I" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "geo.region", content: "IN-UP" },
       { name: "geo.placename", content: "Lucknow, Delhi NCR" },
