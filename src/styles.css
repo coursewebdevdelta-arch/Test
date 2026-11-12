@@ -310,8 +310,8 @@
 .contact-copy h2 em { color: var(--color-gold); }
 .contact-copy > p { max-width: 400px; color: color-mix(in oklab, var(--color-primary-foreground) 75%, transparent); font-size: 12px; line-height: 1.9; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 23px; }
-.contact-email { min-height: 48px; border-color: color-mix(in oklab, var(--color-primary-foreground) 45%, transparent); border-radius: 2px; color: var(--color-primary-foreground); font-size: 12px; }
-.contact-email:hover { background: color-mix(in oklab, var(--color-primary-foreground) 10%, transparent); color: var(--color-primary-foreground); }
+.contact-email { min-height: 48px; background: transparent !important; border: 1px solid color-mix(in oklab, var(--color-primary-foreground) 45%, transparent) !important; border-radius: 2px; color: var(--color-primary-foreground) !important; font-size: 12px; box-shadow: none; }
+.contact-email:hover { background: color-mix(in oklab, var(--color-primary-foreground) 12%, transparent) !important; color: var(--color-primary-foreground) !important; }
 .contact-details { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid color-mix(in oklab, var(--color-primary-foreground) 20%, transparent); }
 .contact-details > div { min-height: 123px; padding: 19px 18px; border-right: 1px solid color-mix(in oklab, var(--color-primary-foreground) 20%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--color-primary-foreground) 20%, transparent); }
 .contact-details > div:nth-child(even) { border-right: 0; }
