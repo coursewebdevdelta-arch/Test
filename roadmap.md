@@ -1,2 +1,4 @@
 - [x] Recreate reference portfolio as a React website with editable sample content, generated portrait, navigation, contact links, and disclaimer.
 - [x] Verify preview and clear the implementation checklist.
+- [ ] Replace the sample advocate name and portrait with the user's details (waiting for the exact name and uploaded photo).
+- [ ] Add the requested practice areas after the user identifies which ones to include.
